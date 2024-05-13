@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.staffgear.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Заголовок -->
+    <Label text="Инвентаризация оборудования сотрудников" />
+
+    <!-- Поле выбора сотрудника -->
+    <ComboBox fx:id="employeeComboBox" promptText="Выберите сотрудника" />
+
+    <!-- Таблица с информацией о наличии оргтехники у выбранного сотрудника -->
+    <TableView fx:id="equipmentTableView" prefWidth="400">
+        <columns>
+            <TableColumn text="№" />
+            <TableColumn text="Модель" />
+            <TableColumn text="Количество" />
+            <TableColumn text="Серийный номер" />
+        </columns>
+    </TableView>
+
+    <!-- Кнопка для добавления нового сотрудника -->
+    <Button text="Добавить нового сотрудника" onAction="#addEmployeeButtonClicked" />
+
+    <!-- Дополнительные кнопки -->
+    <HBox alignment="CENTER" spacing="10.0">
+        <Button text="Редактировать" />
+        <Button text="Удалить" />
+    </HBox>
+</VBox>
